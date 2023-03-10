@@ -1,0 +1,247 @@
+@use 'functions' as *;
+@use 'colors' as *;
+@use 'fonts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+// UNIVERSAL
+
+body{
+  font-size: 18px;
+  font-family: $rubik;
+  position: relative;
+  color: #fff;
+  background-color: $very-dark-blue-color;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.active{
+    color: #fff;
+}
+
+[role="tabpanel"][aria-hidden="true"]{
+    display: none;
+}
+
+
+
+main{
+    @include set-flex($flex-direction: column, $align-items: center, $justify-content: center);
+    height: 100vh;
+    .container{
+        @include set-grid;
+        grid-template-columns: 1fr 3.3fr;
+        max-width: 61.67rem;
+        gap: 1.5rem;
+        .report, .details{
+            background-color: $dark-blue-color;
+        }
+
+        .report{
+            border-radius: 1rem;
+
+            &__title, &__periodicals{
+                padding: 1.5rem;
+            }
+            
+            &__title{
+                background-color: $blue-color;
+                border-radius: 1rem;
+
+                img{
+                    width: clamp(4rem, 5vw, 7.5rem);
+                    margin-bottom: 2rem;
+                    border: .2rem solid #fff;
+                    border-radius: 100vw;
+
+                }
+                p{
+                    font-size: 0.9rem;
+                    color: $pale-blue-color;
+                    margin-bottom: 2.5rem;
+
+                    span{
+                        color: #fff;
+                        font-size: 2rem;
+                        font-weight: 300;
+
+                    }
+                }
+            }
+
+            &__periodicals{
+                    list-style: none;
+                    @include set-flex($flex-direction: column);
+                    gap: 1rem;
+                    
+                    button{
+                        color: $saturated-blue-color;
+                        font-size: 1rem;
+                        font-weight: 300;
+
+                        &:where([aria-selected="true"], :hover, :focus-visible) {
+                            color: #fff;
+
+                        }
+                    }
+            }
+        }
+        &__cards{
+        @include set-grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5rem;
+            .card{
+                border-radius: 1rem;
+                
+                &__img{
+                    position: relative;
+                    img{
+                        position: absolute;
+                        top: -0.4rem;
+                        right: 1rem;
+                        overflow: hidden;
+                        width: 4rem;
+                    }
+                }
+
+                .details{
+                    padding: 1.5rem;
+                    border-radius: 1rem;
+                    margin-top: 2.5rem;
+                    z-index: 2;
+                    position: relative;
+                    .heading{
+                        @include set-flex($justify-content: space-between, $align-items: center);
+                        margin-bottom: 1.5rem;
+                        button:hover{
+                            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(52deg) brightness(101%) contrast(102%);
+                        }
+                    }
+                    .amount{
+                        @include set-flex($flex-direction: column);
+                        gap: 0.5rem;
+                        .current{
+                            font-size: 3rem;
+                            font-weight: 300;
+                        }
+                        .previous{
+                            color: $pale-blue-color;
+                            font-size: 0.8rem;
+                        }
+                    }
+    
+                }
+            }
+    }
+
+        // Have parts top image be hidden outside the card
+
+        .work,
+        .play,
+        .study,
+        .exercise,
+        .social,
+        .self-care
+        {
+            overflow: hidden;
+            transition: all 1s;
+            &:hover{
+                transform: translateY(-10%);
+            }
+        }
+
+        // Seperate Colors for all 6 cards
+
+        .work{
+            background-color: $work-color;
+
+        }
+        .play{
+            background-color: $play-color;
+        }
+        .study{
+            background-color: $study-color;
+        }
+        .exercise{
+            background-color: $exercise-color;
+        }
+        .social{
+            background-color: $social-color;
+        }
+        .self-care{
+            background-color: $self-care-color;
+        }
+
+        
+
+    }
+    
+}
+
+@media(max-width: 64rem){
+    main{
+        justify-content: flex-start;
+        .container{
+            padding: 5rem 0;
+            grid-template-columns: none;
+
+            
+            .report{
+                &__title{
+                    @include set-flex($align-items: center);
+                    gap: 1rem;
+                    img, p{
+                        margin-bottom: 0;
+                    }
+                    p{
+                        
+                        span{
+                            font-size: 1.5rem;
+                            display: table;
+                        }
+                    }
+                }
+                &__periodicals{
+                        @include set-flex($flex-direction: row, $justify-content: space-between);
+                    }
+            }
+            &__cards{
+            grid-template-columns: none;
+            grid-template-rows: none;
+            .card{
+                border-radius: 1rem;
+                width: 19rem; // had to manually set width to fit with the report element, let me know if there is another way to do it //
+                .details{
+
+                    .heading{
+    
+                        margin-bottom: 0.5rem;
+
+                    }
+                    .amount{
+                        @include set-flex($flex-direction: row, $justify-content: space-between, $align-items: center);
+                        .current{
+                            font-size: 1.8rem;
+                        }
+                    }
+      
+                }
+            }
+        }
+        }
+    }
+}

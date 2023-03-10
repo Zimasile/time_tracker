@@ -1,0 +1,211 @@
+      <!--WEEKLY-->
+      <div class="container__cards" role="tabpanel" aria-labelledby="tab-weekly" id="panel-weekly" tabindex="0" aria-hidden="true">
+        <div class="card work">
+          <div class="card__img">
+            <img src="images/icon-work.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Work</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">32hrs</p>
+              <p class="previous">Last Week - <span class="previous__hours">36hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card play">
+          <div class="card__img">
+            <img src="images/icon-play.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Play</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">10hrs</p>
+              <p class="previous">Last Week - <span class="previous__hours">8hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card study">
+          <div class="card__img">
+            <img src="images/icon-study.svg" alt="">  
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Study</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">4hrs</p>
+              <p class="previous">Last Week - <span class="previous__hours">7hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card exercise">
+          <div class="card__img">
+            <img src="images/icon-exercise.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Exercise</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">4hrs</p>
+              <p class="previous">Last Week - <span class="previous__hours">5hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card social">
+          <div class="card__img">
+            <img src="images/icon-social.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Social</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">5hrs</p>
+              <p class="previous">Last Week - <span class="previous__hours">10hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card self-care">
+          <div class="card__img">
+            <img src="images/icon-self-care.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Self Care</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">2hrs</p>
+              <p class="previous">Last Week - <span class="previous__hours">2hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MONTHLY-->
+      <div class="container__cards" role="tabpanel" aria-labelledby="tab-monthly" id="panel-monthly" tabindex="0" aria-hidden="true">
+        <div class="card work">
+          <div class="card__img">
+            <img src="images/icon-work.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Work</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">103hrs</p>
+              <p class="previous">Last Month - <span class="previous__hours">128hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card play">
+          <div class="card__img">
+            <img src="images/icon-play.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Play</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">23hrs</p>
+              <p class="previous">Last Month - <span class="previous__hours">29hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card study">
+          <div class="card__img">
+            <img src="images/icon-study.svg" alt="">  
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Study</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">13hrs</p>
+              <p class="previous">Last Month - <span class="previous__hours">19hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card exercise">
+          <div class="card__img">
+            <img src="images/icon-exercise.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Exercise</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">11hrs</p>
+              <p class="previous">Last Month - <span class="previous__hours">18hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card social">
+          <div class="card__img">
+            <img src="images/icon-social.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Social</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">21hrs</p>
+              <p class="previous">Last Month - <span class="previous__hours">23hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card self-care">
+          <div class="card__img">
+            <img src="images/icon-self-care.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Self Care</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">7hrs</p>
+              <p class="previous">Last Month - <span class="previous__hours">11hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="report">
+        <div class="report__title">
+          <img src="https://i.postimg.cc/g2gzQcyj/IMG-20221028-114131.jpg" alt="" class="jeremy">
+          <p>Report for <span>Wiseman</span></p>
+        </div>
+        <div class="report__periodicals" role:"tablist" aria-label="Time Tracking Section">
+          <button 
+          role="tab" 
+          aria-selected="true" 
+          aria-controls="panel-daily"
+          id="tab-daily" 
+          class="btn tab">
+          Daily</button>
+          <button 
+          role="tab" 
+          aria-selected="false" 
+          aria-controls="panel-weekly"
+          id="tab-weekly" 
+          class="btn tab">
+          Weekly</button>
+          <button 
+          role="tab" 
+          aria-selected="false" 
+          aria-controls="panel-monthly"
+          id="tab-monthly" 
+          class="btn tab">
+          Monthly</button>
+
+        </div>
+      </div>
+
+      <!--DAILY BY DEFAULT-->
+    <div id="panel-container">
+      <div class="container__cards" role="tabpanel" aria-labelledby="tab-daily" id="panel-daily" tabindex="0" aria-hidden="false">
+        <div class="card work">
+          <div class="card__img">
+            <img src="images/icon-work.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Work</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">...hrs</p>
+              <p class="previous">Yesterday - <span class="previous__hours">...hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card play">
+          <div class="card__img">
+            <img src="images/icon-play.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Play</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">...hrs</p>
+              <p class="previous">Yesterday - <span class="previous__hours">...hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card study">
+          <div class="card__img">
+            <img src="images/icon-study.svg" alt="">  
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Study</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">...hrs</p>
+              <p class="previous">Yesterday - <span class="previous__hours">...hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card exercise">
+          <div class="card__img">
+            <img src="images/icon-exercise.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Exercise</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">...hrs</p>
+              <p class="previous">Yesterday - <span class="previous__hours">...hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card social">
+          <div class="card__img">
+            <img src="images/icon-social.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Social</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">...hrs</p>
+              <p class="previous">Yesterday - <span class="previous__hours">...hrs</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card self-care">
+          <div class="card__img">
+            <img src="images/icon-self-care.svg" alt="">
+          </div>
+          <div class="details">
+            <div class="heading">
+              <p>Self Care</p>
+              <button>
+                <img src="images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="amount">
+              <p class="current">...hrs</p>
+              <p class="previous">Yesterday - <span class="previous__hours">...hrs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </main>
+
+<script src="js/tabs.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  color: #fff;
+  background-color: hsl(226, 43%, 10%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  color: #fff;
+}
+
+[role=tabpanel][aria-hidden=true] {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+main .container {
+  display: grid;
+  align-items: stretch;
+  justify-content: flex-start;
+  grid-template-columns: 1fr 3.3fr;
+  max-width: 61.67rem;
+  gap: 1.5rem;
+}
+main .container .report, main .container .details {
+  background-color: hsl(235, 46%, 20%);
+}
+main .container .report {
+  border-radius: 1rem;
+}
+main .container .report__title, main .container .report__periodicals {
+  padding: 1.5rem;
+}
+main .container .report__title {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 1rem;
+}
+main .container .report__title img {
+  width: clamp(4rem, 5vw, 7.5rem);
+  margin-bottom: 2rem;
+  border: 0.2rem solid #fff;
+  border-radius: 100vw;
+}
+main .container .report__title p {
+  font-size: 0.9rem;
+  color: hsl(236, 100%, 87%);
+  margin-bottom: 2.5rem;
+}
+main .container .report__title p span {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+}
+main .container .report__periodicals {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+main .container .report__periodicals button {
+  color: hsl(235, 45%, 61%);
+  font-size: 1rem;
+  font-weight: 300;
+}
+main .container .report__periodicals button:where([aria-selected=true], :hover, :focus-visible) {
+  color: #fff;
+}
+main .container__cards {
+  display: grid;
+  align-items: stretch;
+  justify-content: flex-start;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+main .container__cards .card {
+  border-radius: 1rem;
+}
+main .container__cards .card__img {
+  position: relative;
+}
+main .container__cards .card__img img {
+  position: absolute;
+  top: -0.4rem;
+  right: 1rem;
+  overflow: hidden;
+  width: 4rem;
+}
+main .container__cards .card .details {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 2.5rem;
+  z-index: 2;
+  position: relative;
+}
+main .container__cards .card .details .heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+main .container__cards .card .details .heading button:hover {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(52deg) brightness(101%) contrast(102%);
+}
+main .container__cards .card .details .amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+main .container__cards .card .details .amount .current {
+  font-size: 3rem;
+  font-weight: 300;
+}
+main .container__cards .card .details .amount .previous {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.8rem;
+}
+main .container .work,
+main .container .play,
+main .container .study,
+main .container .exercise,
+main .container .social,
+main .container .self-care {
+  overflow: hidden;
+  transition: all 1s;
+}
+main .container .work:hover,
+main .container .play:hover,
+main .container .study:hover,
+main .container .exercise:hover,
+main .container .social:hover,
+main .container .self-care:hover {
+  transform: translateY(-10%);
+}
+main .container .work {
+  background-color: hsl(15, 100%, 70%);
+}
+main .container .play {
+  background-color: hsl(195, 74%, 62%);
+}
+main .container .study {
+  background-color: hsl(348, 100%, 68%);
+}
+main .container .exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+main .container .social {
+  background-color: hsl(264, 64%, 52%);
+}
+main .container .self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+
+@media (max-width: 64rem) {
+  main {
+    justify-content: flex-start;
+  }
+  main .container {
+    padding: 5rem 0;
+    grid-template-columns: none;
+  }
+  main .container .report__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  main .container .report__title img, main .container .report__title p {
+    margin-bottom: 0;
+  }
+  main .container .report__title p span {
+    font-size: 1.5rem;
+    display: table;
+  }
+  main .container .report__periodicals {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  main .container__cards {
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
+  main .container__cards .card {
+    border-radius: 1rem;
+    width: 19rem;
+  }
+  main .container__cards .card .details .heading {
+    margin-bottom: 0.5rem;
+  }
+  main .container__cards .card .details .amount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main .container__cards .card .details .amount .current {
+    font-size: 1.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */
